@@ -52,6 +52,15 @@ body .nav-wrapper {
     border-bottom : 2px solid #909497 ;
 }
 
+.responsive-menu {
+    display: none;
+    margin-right: 30px;
+}
+
+.responsive-menu .menu-icon {
+    font-size: 130%;
+}
+
 /*Begin carousel*/
 
 .carousel {
@@ -64,5 +73,11 @@ body .nav-wrapper {
 
 
 @media only screen and (max-width: 750px) {
-    
+    .nav-links {
+        display: none;
+    }
+
+    .responsive-menu {
+        display: block;
+    }
 }
