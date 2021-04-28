@@ -54,11 +54,11 @@ body .nav-wrapper {
 
 .responsive-menu {
     display: none;
-    margin-right: 30px;
+    margin-right: 40px;
 }
 
 .responsive-menu .menu-icon {
-    font-size: 130%;
+    font-size: 150%;
 }
 
 /*Begin carousel*/
