@@ -70,7 +70,7 @@ body .nav-wrapper {
     transition: 0.2s;
     display: flex;
     align-items: center;
-    /*transform: translateY(-1000px);*/
+    transform: translateY(-1000px);
 }
 
 .responsive-menu-items .close-icon {
