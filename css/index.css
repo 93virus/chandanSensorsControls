@@ -12,22 +12,28 @@ a {
     cursor: pointer;
 }
 
+img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
 .container {
     display: flex;
-    max-width: 1200px;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .section-title {
     font-size: 3rem;
     text-transform: uppercase;
-    color: #515A5A;
+    color: #000;
+    font-weight: 500;
 }
 
 .section-title span {
-    color: crimson;
+    color: #8E44AD;
 }
 
 
@@ -35,7 +41,7 @@ a {
 /* Begin Nav Wrapper */
 body .nav-wrapper {
     position: fixed;
-    transition: 0s;
+    transition: 0.2s;
     transition-property: background-color;
     width: 100%;
     height: 80px;
@@ -80,8 +86,8 @@ body .nav-wrapper {
     margin-right: 40px;
 }
 
-.responsive-menu .menu-icon {
-    font-size: 150%;
+.responsive-menu .menu-icon img {
+    object-fit: contain;
 }
 
 .responsive-menu-items {
@@ -201,6 +207,101 @@ body .nav-wrapper {
     background-color: #8E44AD;
 }
 /* End Hero Section */
+
+
+
+/* Sensors Section */
+#sensors .sensors {
+    flex-direction: column;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#sensors .sensors-top {
+    margin-bottom: 30px;
+}
+
+#sensors .all-sensors {
+    border-radius: 10px;
+    width: 80%;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+#sensors .sensors-bottom .sensors-img {
+    flex-basis: 50%;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    transition: 0.3s ease transform;
+}
+
+#sensors .sensors-img img{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+#sensors .sensors-bottom .sensors-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: 0.4;
+}
+
+#sensors .sensors-bottom .sensors-img:hover {
+    transform: scale(1.1);
+}
+
+#sensors .sensors-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    margin: 0 auto;
+    overflow: hidden;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    padding: 20px;
+    min-height: 300px;
+}
+
+#sensors .sensors-item h2 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#sensors .sensors-item p {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+#sensors .sensors-item a {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    transition: 0.2s background-color, color;
+}
+
+#sensors .sensors-item a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* End Sensors Section */
+
 
 
 /* Keyframes */
