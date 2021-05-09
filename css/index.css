@@ -55,7 +55,7 @@ body .nav-wrapper {
 .nav-wrapper .nav-logo {
     position: relative;
     z-index: 1;
-    background-color: #8E44AD;
+    /* background-color: #8E44AD; */
     border-radius: 50%;
 }
 
