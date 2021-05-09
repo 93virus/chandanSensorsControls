@@ -3,12 +3,6 @@
     <title>Chandan Sensors Controls</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script>
         var toggleActive = false;
         function toggle() {
@@ -24,30 +18,28 @@
     </script>
 </head>
     <body>
-        <!--Begin of body wrapper-->
-        <div class="wrapper">
-            
+                   
             <!--Begin of nav bar-->
             <div class="nav-wrapper" id="nav-wrapper">
                 <div class="nav-logo" id="nav-logo">
                     <img id="logo" src="images/logo.png" />
                 </div>
                 <div class="nav-links" id="nav-links">
-                    <a href="#">Home</a>
-                    <a href="#">Sensors</a>
-                    <a href="#">Automation</a>
-                    <a href="#">Services</a>
-                    <a href="#">Contact Us</a>
+                    <a id="link1" href="#">Home</a>
+                    <a id="link2" href="#">Sensors</a>
+                    <a id="link3" href="#">Automation</a>
+                    <a id="link4" href="#">Services</a>
+                    <a id="link5" href="#">Contact Us</a>
                 </div>
                 <div class="responsive-menu">
                     <div class="menu-icon" onclick="toggle()" >
-                        <i class="fas fa-bars"></i>
+                        <img src="https://img.icons8.com/cotton/50/000000/menu.png"/>
                     </div>
                 </div>
             </div>
 
             <div class="responsive-menu-items" id="menu-items">
-                <div class="close-icon" onclick="toggle()"><i class="fas fa-times"></i></div>
+                <div class="close-icon" onclick="toggle()"><img src="https://img.icons8.com/windows/64/000000/macos-close.png"/></i></div>
                    <table class="menu-table">
                        <tr><td><a href="#">Home</a></td></tr>
                        <tr><td><a href="#">Sensors</a></td></tr>
@@ -58,95 +50,53 @@
             </div>
             <!--End of nav bar-->
 
-            <!--Begin of carousel-->
-            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>First slide label</h5>
-                      <p>Some representative placeholder content for the first slide.</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item" data-bs-interval="2000">
-                    <img src="" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Second slide label</h5>
-                      <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>Third slide label</h5>
-                      <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-              <!--End of carousel-->
-
-              <!--Begin of sensor section-->
-              <div class="sensors-section">
-                <h3 align="center"><u>Sensors</u></h3>
-                <div class="card-deck">
-                  <div class="card">
-                    <img class="card-img-top" src="images/pyrometer.jpeg" alt="Pyrometer">
-                    <div class="card-body">
-                      <h5 class="card-title">Pyrometer</h5>
-                      <p class="card-text text-muted  ">Developed specifically for high-temperature applications in the steel and primary metal industries proven reliability in severe production environments. Improve Your Process with Better Measurement today's increasing quality standards and higher energy costs demand more precise temperature control in the steel making process.</p>
-                      <p class="card-text text-center"><button type="button" class="btn btn-outline-dark">more</button></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <img class="card-img-top" src="images/hmd.jpeg" alt="Hot Metal Detector">
-                    <div class="card-body">
-                      <h5 class="card-title">Hot Metal Detector</h5>
-                      <p class="card-text text-muted">The Hot Metal Detector (HMD) which, for decades has been operating successfully worldwide in the steel industry. Hot Metal Detectors (HMDs) are used in many different applications throughout the metals rolling process, for target detection, tracking and length determination. They are also an essential component of cut-to-length systems.</p>
-                      <p class="card-text text-center"><button type="button" class="btn btn-outline-dark">more</button></p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <img class="card-img-top" src="images/autocut.jpg" alt="Auto Cut Length">
-                    <div class="card-body">
-                      <h5 class="card-title">Auto Cut Length</h5>
-                      <p class="card-text text-muted">We have pleasure to introduce ourselves as manufacturers and suppliers of ROTARY SHEAR AUTO CUT TO LENGTH control systems, while eliminating traditional manual cutting, it is an ultimate cost and scrap saver system. The HMD with the panel can be used for end piece By Pass on TMT mills, provided required distance for the HMD & Mill Setup.</p>
-                      <p class="card-text text-center"><button type="button" class="btn btn-outline-dark">more</button></p>
-                    </div>
-                  </div>
+            <section id="hero">
+              <div class="hero container">
+                <div>
+                  <h1>Chandan <span></span></h1>
+                  <h1>Sensor <span>&nbsp;</span></h1>
+                  <h1>Controls <span></span></h1>
+                  <a href="#" class="cta">Sensors</a>
                 </div>
               </div>
-              <!--End of sensor section-->
+            </section>
 
-        </div>
-        <!--End of body wrapper-->
+            <section id="sensors">
+                <div class="sensors container"></div>
+            </section>
+            
 
         <!--Script for window scroll-->
         <script>
             window.onscroll = function() {scrollFunction()};
 
             function scrollFunction() {
+                var white = "#fff";
+                var black = "#000";
                 if (document.body.scrollTop > 80) {
                     document.getElementById("nav-wrapper").style.height = "60px";
+                    document.getElementById("nav-wrapper").style.backgroundColor = "#fff";
                     document.getElementById("logo").style.width = "140px";
+                    document.getElementById("nav-logo").style.backgroundColor = "transparent";
                     document.getElementById("nav-links").style.fontSize = "16px";
+                    document.getElementById("link1").style.color = black;
+                    document.getElementById("link2").style.color = black;
+                    document.getElementById("link3").style.color = black;
+                    document.getElementById("link4").style.color = black;
+                    document.getElementById("link5").style.color = black;
+                    document.getElementById("nav-wrapper").style.borderBottom = "1px solid #D5DBDB";
                 } else {
                     document.getElementById("nav-wrapper").style.height = "80px";
+                    document.getElementById("nav-wrapper").style.backgroundColor = "transparent";
                     document.getElementById("logo").style.width = "150px";
+                    document.getElementById("nav-logo").style.backgroundColor = "#8E44AD";
                     document.getElementById("nav-links").style.fontSize = "18px";
+                    document.getElementById("link1").style.color = white;
+                    document.getElementById("link2").style.color = white;
+                    document.getElementById("link3").style.color = white;
+                    document.getElementById("link4").style.color = white;
+                    document.getElementById("link5").style.color = white;
+                    document.getElementById("nav-wrapper").style.borderBottom = "0px solid grey";
                 }
             }
         </script>

@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 * {
     padding : 0px;
     margin : 0px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -10,26 +12,39 @@ a {
     cursor: pointer;
 }
 
-body .wrapper {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    min-height: 2000px;
-    background-color: #F8F9F9;
+.container {
+    display: flex;
+    max-width: 1200px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
+.section-title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #515A5A;
+}
+
+.section-title span {
+    color: crimson;
+}
+
+
+
+/* Begin Nav Wrapper */
 body .nav-wrapper {
     position: fixed;
-    transition: 0.2s;
+    transition: 0s;
+    transition-property: background-color;
     width: 100%;
     height: 80px;
-    border-bottom: 1px solid #D5DBDB;
-    background-color: #fff;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 999;
-    opacity: 0.99;
+    opacity: 1;
 }
 
 .nav-wrapper .nav-logo img{
@@ -37,19 +52,26 @@ body .nav-wrapper {
     width: 150px;
 }
 
+.nav-wrapper .nav-logo {
+    position: relative;
+    z-index: 1;
+    background-color: #8E44AD;
+    border-radius: 50%;
+}
+
 .nav-wrapper .nav-links {
     padding: 5px 25px 5px 25px;
     font-size: 18px;
-    transition: 0.2s;
+    transition: 0.2s font-size;
 }
 
 .nav-wrapper .nav-links a {
-    color: #2E4053 ;
+    color: #fff ;
     margin: 0px 15px 0px 15px;
 }
 
 .nav-wrapper .nav-links a:hover {
-    transition: 0.05s;
+    transition: 0.05s border-bottom;
     border-bottom : 2px solid #909497 ;
 }
 
@@ -91,37 +113,123 @@ body .nav-wrapper {
 .menu-table tr {
     height: 80px;
 }
+/* End Nav Wrapper */
 
-/*Begin carousel*/
 
-.carousel {
-    position: relative !important;
-    height: 500px !important;
+/* Begin Hero Section */
+#hero {
+    background-image: url("../images/pyrometer.jpeg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
 }
 
-/*End carousel*/
-
-/*Begin of sensors section*/
-.sensors-section {
+#hero::after {
+    content: '';
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 30px;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.8;
+    z-index: -1;
 }
 
-.sensors-section h3 {
-    color: #515A5A;
+#hero .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
 }
 
-.sensors-section .card-deck {
-    padding: 20px 0 20px 0;
+#hero .hero h1 {
+    width: fit-content;
+    color: transparent;
+    font-size: 3rem;
+    display: block;
+    position: relative;
+    animation: text_reveal 0.5s ease forwards;
+    animation-delay: 1.5s;
+}
+#hero h1:nth-child(1) {
+    animation-delay: 1.5s;
+}
+#hero h1:nth-child(2) {
+    animation-delay: 2.5s;
+}
+#hero h1:nth-child(3) {
+    animation-name: text_reveal_name;
+    animation-delay: 3.5s;
 }
 
-/*End of sensors section*/
+#hero .hero h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #8E44AD;
+    animation: text_reveal_frame 1s ease;
+    animation-delay: 1s;
+}
 
-@media only screen and (max-width: 750px) {
-    body .wrapper {
-        height: 3000px;
+#hero  h1:nth-child(1) span {
+    animation-delay: 1s;
+}
+#hero  h1:nth-child(2) span {
+    animation-delay: 2s;
+}
+#hero  h1:nth-child(3) span {
+    animation-delay: 3s;
+}
+
+#hero .hero .cta {
+    display: inline-block;
+    margin-top: 30px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 2px solid #8E44AD;
+    padding: 10px 30px;
+    font-size: 1.5rem;
+    font-weight: 100;
+    transition: .3s;
+    transition-property: background-color, color;
+}
+#hero .hero .cta:hover {
+    background-color: #8E44AD;
+}
+/* End Hero Section */
+
+
+/* Keyframes */
+@keyframes text_reveal_frame {
+    50% {
+        width: 100%;
+        left : 0;
     }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal {
+    100% {
+        color: #fff;
+    }
+}
+@keyframes text_reveal_name {
+    100% {
+        color: #8E44AD;
+    }
+}
+/* End KeyFrames */
+
+/* Media Query for tablet */
+@media only screen and (max-width: 768px) {
 
     .nav-links {
         display: none;
@@ -131,3 +239,4 @@ body .nav-wrapper {
         display: block;
     }
 }
+/* End Media Query for tablet */
