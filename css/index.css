@@ -148,7 +148,7 @@ body .nav-wrapper {
 #hero .hero h1 {
     width: fit-content;
     color: transparent;
-    font-size: 3rem;
+    font-size: 4rem;
     display: block;
     position: relative;
     animation: text_reveal 0.5s ease forwards;
@@ -192,8 +192,8 @@ body .nav-wrapper {
     text-transform: uppercase;
     color: #fff;
     border: 2px solid #8E44AD;
-    padding: 10px 30px;
-    font-size: 1.5rem;
+    padding: 20px 50px;
+    font-size: 2rem;
     font-weight: 100;
     transition: .3s;
     transition-property: background-color, color;
@@ -457,6 +457,60 @@ body .nav-wrapper {
 
     .responsive-menu {
         display: block;
+    }
+
+    #hero .hero h1 {
+        font-size: 3rem;
+    }
+
+    #hero .hero .cta {
+        padding: 10px 30px;
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    #sensors .sensors {
+        padding-bottom: 0;
+    }
+
+    #sensors .sensors-bottom {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #sensors .sensors-bottom .all-sensors {
+        width: 30%;
+    }
+
+    #about .about {
+        padding-bottom: 0px;
+    }
+
+    #about .about-info {
+        flex-direction: row;
+    }
+
+    #about .col-left {
+        margin-right: 50px;
+    }
+
+    #footer .footer {
+        min-height: 250px;
+    }
+
+    #footer .footer-links {
+        margin-top: 60px;
+    }
+
+    #footer .footer-nav-links {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #footer .footer-nav-links a {
+        margin-right: 20px;
     }
 }
 /* End Media Query for tablet */
