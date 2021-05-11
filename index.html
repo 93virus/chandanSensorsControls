@@ -16,35 +16,51 @@
             }
         }
     </script>
+    <script>
+        var toggleDropdownActive = false;
+        function toggleDropdown() {
+            if (!toggleDropdownActive) {
+                toggleDropdownActive = true;
+                document.getElementById("sensDropdown").style.display = "block";
+            } else {
+                toggleDropdownActive = false;
+                document.getElementById("sensDropdown").style.display = "none";
+            }
+        }
+    </script>
 </head>
     <body>
                    
             <!--Begin of nav bar-->
-            <div class="nav-wrapper" id="nav-wrapper">
-                <div class="nav-logo" id="nav-logo">
-                    <img id="logo" src="images/logo.png" />
+            <section id="navbar">
+                <div class="logo">
+                    <img  id="logo" src="/images/logo.png">
                 </div>
-                <div class="nav-links" id="nav-links">
-                    <a id="link1" href="#">Home</a>
-                    <a id="link2" href="#">Sensors</a>
-                    <a id="link3" href="#">Automation</a>
-                    <a id="link4" href="#">Services</a>
-                    <a id="link5" href="#">Contact Us</a>
-                </div>
-                <div class="responsive-menu">
-                    <div class="menu-icon" onclick="toggle()" >
-                        <img src="https://img.icons8.com/cotton/50/000000/menu.png"/>
-                    </div>
-                </div>
-            </div>
+                <ul class="nav" id="nav-links">
+                    <li><a id="link1" href="#">Home</a></li>
+                    <li><a id="link2" href="#">Sensors</a>
+                    <ul class="sensDrop">
+                        <li><a href="#">Pyrometer</a></li><br>
+                        <li><a href="#">Hot Metal Detector</a></li>
+                    </ul></li>
+                    <li><a id="link3" href="#">Automation</a></li>
+                    <li><a id="link4" href="#">About Us</a></li>
+                    <li><a id="link5" href="#">Contact Us</a></li>
+                </ul>
+            </section>
 
             <div class="responsive-menu-items" id="menu-items">
                 <div class="close-icon" onclick="toggle()"><img src="https://img.icons8.com/windows/64/000000/macos-close.png"/></i></div>
                    <table class="menu-table">
                        <tr><td><a href="#">Home</a></td></tr>
-                       <tr><td><a href="#">Sensors</a></td></tr>
+                       <tr><td><p onclick="toggleDropdown()">Sensors</p>
+                        <ul id="sensDropdown">
+                           <li><a href="#">Pyrometer</a></li>
+                           <li><a href="#">HMD</a></li>
+                        </ul>
+                        </td></tr>
                        <tr><td><a href="#">Automation</a></td></tr>
-                       <tr><td><a href="#">Services</a></td></tr>
+                       <tr><td><a href="#">About Us</a></td></tr>
                        <tr><td><a href="#">Contact Us</a></td></tr>
                    </table>
             </div>
@@ -132,7 +148,7 @@
                             <a href="#">Home</a>
                             <a href="#">Sensors</a>
                             <a href="#">Automation</a>
-                            <a href="#">Services</a>
+                            <a href="#">About Us</a>
                             <a href="#">Contact Us</a>
                         </div>
                         <div class="social-icons">
@@ -162,28 +178,37 @@
             function scrollFunction() {
                 var white = "#fff";
                 var black = "#000";
+                var lpad = "19px";
                 if (document.body.scrollTop > 80) {
-                    document.getElementById("nav-wrapper").style.height = "60px";
-                    document.getElementById("nav-wrapper").style.backgroundColor = "#fff";
-                    document.getElementById("logo").style.width = "140px";
-                    document.getElementById("nav-links").style.fontSize = "16px";
+                    document.getElementById("navbar").style.height = "60px";
+                    document.getElementById("navbar").style.backgroundColor = "#fff";
+                    document.getElementById("logo").style.width = "120px";
+                    document.getElementById("link1").style.margin = lpad;
+                    document.getElementById("link2").style.margin = lpad;
+                    document.getElementById("link3").style.margin = lpad;
+                    document.getElementById("link4").style.margin = lpad;
+                    document.getElementById("link5").style.margin = lpad;
                     document.getElementById("link1").style.color = black;
                     document.getElementById("link2").style.color = black;
                     document.getElementById("link3").style.color = black;
                     document.getElementById("link4").style.color = black;
                     document.getElementById("link5").style.color = black;
-                    document.getElementById("nav-wrapper").style.borderBottom = "1px solid #D5DBDB";
+                    document.getElementById("navbar").style.borderBottom = "1px solid #D5DBDB";
                 } else {
-                    document.getElementById("nav-wrapper").style.height = "80px";
-                    document.getElementById("nav-wrapper").style.backgroundColor = "transparent";
+                    document.getElementById("navbar").style.height = "80px";
+                    document.getElementById("navbar").style.backgroundColor = "transparent";
                     document.getElementById("logo").style.width = "150px";
-                    document.getElementById("nav-links").style.fontSize = "18px";
+                    document.getElementById("link1").style.margin = "29px";
+                    document.getElementById("link2").style.margin = "29px";
+                    document.getElementById("link3").style.margin = "29px";
+                    document.getElementById("link4").style.margin = "29px";
+                    document.getElementById("link5").style.margin = "29px";
                     document.getElementById("link1").style.color = white;
                     document.getElementById("link2").style.color = white;
                     document.getElementById("link3").style.color = white;
                     document.getElementById("link4").style.color = white;
                     document.getElementById("link5").style.color = white;
-                    document.getElementById("nav-wrapper").style.borderBottom = "0px solid grey";
+                    document.getElementById("navbar").style.borderBottom = "0px solid grey";
                 }
             }
         </script>
