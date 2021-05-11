@@ -37,11 +37,12 @@ a {
 #navbar {
     position: fixed;
     z-index: 9999;
-    background: black;
+    background: transparent;
     height: 80px;
     width: 100%;
     transition: 0.2s;
     transition-property: height;
+    z-index: 999;
 }
 
 #navbar .logo {
@@ -49,6 +50,8 @@ a {
 }
 
 #navbar .logo img {
+    position: relative; 
+    top: 2px;
     width: 150px;
     transition: 0.2s;
 }
@@ -115,6 +118,7 @@ a {
     margin: 29px;
     font-size: 25px;
     transition: .2s;
+    cursor: pointer;
 }
 
 .responsive-menu {
