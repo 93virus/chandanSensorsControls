@@ -37,7 +37,7 @@ a {
 #navbar {
     position: fixed;
     z-index: 9999;
-    background: transparent;
+    background: black;
     height: 80px;
     width: 100%;
     transition: 0.2s;
@@ -105,6 +105,16 @@ a {
 #navbar .sensDrop li {
     padding: 8px 0px;
     font-size: 0.9rem;
+}
+
+#navbar #menu-icon {
+    position: relative;
+    right: 5px;
+    color: #fff;
+    float: right;
+    margin: 29px;
+    font-size: 25px;
+    transition: .2s;
 }
 
 .responsive-menu {

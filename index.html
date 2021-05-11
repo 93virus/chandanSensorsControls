@@ -3,6 +3,7 @@
     <title>Chandan Sensors Controls</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <script>
         var toggleActive = false;
         function toggle() {
@@ -47,6 +48,9 @@
                     <li><a id="link4" href="#">About Us</a></li>
                     <li><a id="link5" href="#">Contact Us</a></li>
                 </ul>
+                <div id="menu-icon">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
             </section>
 
             <div class="responsive-menu-items" id="menu-items">
@@ -183,6 +187,8 @@
                     document.getElementById("navbar").style.height = "60px";
                     document.getElementById("navbar").style.backgroundColor = "#fff";
                     document.getElementById("logo").style.width = "120px";
+                    document.getElementById("menu-icon").style.color = black;
+                    document.getElementById("menu-icon").style.margin = "19px";
                     document.getElementById("link1").style.margin = lpad;
                     document.getElementById("link2").style.margin = lpad;
                     document.getElementById("link3").style.margin = lpad;
@@ -198,6 +204,8 @@
                     document.getElementById("navbar").style.height = "80px";
                     document.getElementById("navbar").style.backgroundColor = "transparent";
                     document.getElementById("logo").style.width = "150px";
+                    document.getElementById("menu-icon").style.color = white;
+                    document.getElementById("menu-icon").style.margin = "29px";
                     document.getElementById("link1").style.margin = "29px";
                     document.getElementById("link2").style.margin = "29px";
                     document.getElementById("link3").style.margin = "29px";
